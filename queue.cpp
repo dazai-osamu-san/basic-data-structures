@@ -29,7 +29,7 @@ void init_queue(){
 unsigned int is_empty(){
     // if the front and end are at same position the queue
     // is empty
-    if(front == end){
+    if(end == -1){ // new change this is better according to gpt
         return 1;
     } else {
         return 0;
@@ -67,8 +67,8 @@ void dequeue(){
     // set front = 0
     queue[front] = 0;
     // shift the array
-    for(int i = 0; i < 5; i++){
-        // for n, i = i+1
+    for(int i = 0; i < end; i++){ // adding end instead of 5 seems
+        // for n, i = i+1         // like a much saner solution
         queue[i] = queue[i+1];
     }
     // decrement the end

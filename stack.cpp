@@ -34,7 +34,7 @@ unsigned int is_empty(){
 /* Check if stack is full */
 unsigned int is_full(){
     // stack is full if stack pointer is pointing to max value (6)
-    if(stack_pointer == 6){
+    if(stack_pointer == 5){
         return 1;
     } else {
         return 0;

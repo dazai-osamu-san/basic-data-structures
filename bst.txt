@@ -1,0 +1,27 @@
+
+// Preorder traversal (Root, Left, Right)
+void preorder(Node* root) {
+    if (root) {
+        cout << root->data << " ";
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+
+// Inorder traversal (Left, Root, Right)
+void inorder(Node* root) {
+    if (root) {
+        inorder(root->left);
+        cout << root->data << " ";
+        inorder(root->right);
+    }
+}
+
+// Postorder traversal (Left, Right, Root)
+void postorder(Node* root) {
+    if (root) {
+        postorder(root->left);
+        postorder(root->right);
+        cout << root->data << " ";
+    }
+}
